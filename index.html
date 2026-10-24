@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comas Tech | Aprende, crea y crece</title>
+<style>
+:root{--green:#123c35;--lime:#d7f36b;--mint:#eaf4ef;--ink:#17231f;--muted:#65736d;--white:#fff;--line:#dce6e0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#f7faf8;line-height:1.55}
+header{background:var(--green);color:white;padding:18px 6%;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:11px;font-size:1.25rem;font-weight:800}.logo{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:var(--lime);color:var(--green);font-size:1.35rem}
+nav{display:flex;gap:8px;flex-wrap:wrap}nav button{background:transparent;color:white;border:1px solid #54766c;padding:9px 13px;border-radius:9px;cursor:pointer;font-weight:600}nav button:hover,nav button.active{background:var(--lime);color:var(--green);border-color:var(--lime)}
+main{max-width:1120px;margin:auto;padding:28px 20px 60px}.hero{background:var(--green);color:white;padding:clamp(28px,6vw,62px);border-radius:24px;display:grid;grid-template-columns:1.5fr 1fr;gap:28px;align-items:center;overflow:hidden}
+.eyebrow{color:var(--lime);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.78rem}.hero h1{font-size:clamp(2.1rem,5vw,3.6rem);line-height:1.06;margin:14px 0}.hero p{color:#dce9e2;max-width:600px}.hero-art{background:#204f45;border:1px solid #52766b;border-radius:20px;padding:28px;text-align:center}.hero-art .big{font-size:5rem}.hero-art strong{display:block;font-size:1.3rem;color:var(--lime)}.btn{display:inline-block;border:0;border-radius:10px;background:var(--lime);color:var(--green);padding:12px 17px;font-weight:800;cursor:pointer;text-decoration:none}.btn.secondary{background:white;border:1px solid var(--line);color:var(--green)}.section{margin-top:38px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:17px}.section h2{font-size:1.8rem;margin:0}.muted{color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:white;border:1px solid var(--line);border-radius:17px;padding:22px;box-shadow:0 5px 18px #163b2b08}.course-icon{font-size:2rem;background:var(--mint);width:58px;height:58px;border-radius:15px;display:grid;place-items:center}.tag{display:inline-block;background:var(--mint);color:var(--green);padding:4px 9px;border-radius:99px;font-size:.78rem;font-weight:700}.card h3{margin:12px 0 6px}.card p{color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}.stat{background:white;border:1px solid var(--line);border-radius:14px;padding:18px}.stat strong{display:block;font-size:1.6rem;color:var(--green)}.hidden{display:none!important}.lesson-layout{display:grid;grid-template-columns:280px 1fr;gap:18px}.lesson-list{display:grid;gap:8px}.lesson-btn{background:white;border:1px solid var(--line);border-radius:10px;padding:12px;text-align:left;cursor:pointer}.lesson-btn.selected{border-color:var(--green);background:var(--mint)}.lesson-content{background:white;border:1px solid var(--line);border-radius:16px;padding:25px}.activity{background:#f1f6f3;padding:17px;border-radius:12px;margin:18px 0}.progress{height:10px;background:#e2eae5;border-radius:20px;overflow:hidden}.progress span{height:100%;display:block;background:#287c63;width:0;transition:width .2s}.quiz-option{display:block;width:100%;text-align:left;padding:12px;margin:8px 0;border:1px solid var(--line);background:white;border-radius:10px;cursor:pointer}.quiz-option:hover{border-color:var(--green)}.notice{padding:13px;background:#eef5d9;border-radius:10px;margin-top:12px}.project-steps{padding-left:22px}.profile-box{max-width:650px}.footer{text-align:center;color:var(--muted);padding:25px 12px;border-top:1px solid var(--line);font-size:.9rem}
+@media(max-width:720px){.hero{grid-template-columns:1fr}.hero-art{display:none}.cards,.stats,.lesson-layout{grid-template-columns:1fr}.lesson-list{grid-template-columns:1fr 1fr}header{align-items:flex-start}nav{width:100%}nav button{flex:1}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><div class="logo">⌘</div><span>Comas Tech</span></div>
+  <nav aria-label="Navegación principal">
+    <button class="active" data-page="inicio">Inicio</button>
+    <button data-page="cursos">Cursos</button>
+    <button data-page="proyecto">Proyecto</button>
+    <button data-page="perfil">Mi avance</button>
+  </nav>
+</header>
+<main>
+<section id="inicio" class="page">
+  <div class="hero">
+    <div><div class="eyebrow">Aprende · Crea · Crece</div><h1>Tu futuro digital empieza aquí.</h1><p>Aprende programación e inteligencia artificial desde cero con actividades prácticas pensadas para desarrollar habilidades digitales y ampliar tus oportunidades laborales.</p><button class="btn" data-go="cursos">Explorar cursos →</button></div>
+    <div class="hero-art"><div class="big">💻</div><strong>Aprende haciendo</strong><p>Pequeños pasos. Nuevas habilidades. Más oportunidades.</p></div>
+  </div>
+  <div class="section"><div class="section-head"><h2>Empieza a aprender</h2><span class="muted">Cursos introductorios</span></div>
+    <div class="cards">
+      <article class="card"><div class="course-icon">⌨️</div><span class="tag">Nivel inicial</span><h3>Programación desde cero</h3><p>Aprende qué es programar, cómo funcionan las variables y cómo diseñar tu primer programa.</p><button class="btn" data-course="programacion">Ver curso</button></article>
+      <article class="card"><div class="course-icon">🤖</div><span class="tag">Nivel inicial</span><h3>Introducción a la IA</h3><p>Conoce los usos de la inteligencia artificial y practica cómo formular instrucciones claras.</p><button class="btn" data-course="ia">Ver curso</button></article>
+    </div>
+  </div>
+  <div class="stats"><div class="stat"><strong>2</strong><span>Cursos de muestra</span></div><div class="stat"><strong>100%</strong><span>Enfoque práctico</span></div><div class="stat"><strong>0</strong><span>Experiencia previa requerida</span></div></div>
+  <div class="section card"><h2>¿Por qué Comas Tech?</h2><p>Buscamos acercar la formación tecnológica a jóvenes de Comas con contenidos claros, práctica guiada y proyectos que puedan mostrar como evidencia de lo aprendido.</p></div>
+</section>
+
+<section id="cursos" class="page hidden">
+  <div class="section-head"><div><div class="eyebrow" style="color:#287c63">Aula virtual</div><h2>Elige una ruta de aprendizaje</h2><p class="muted">Selecciona un curso y completa sus actividades de ejemplo.</p></div></div>
+  <div class="cards" style="margin-bottom:22px">
+    <article class="card"><div class="course-icon">⌨️</div><h3>Programación desde cero</h3><p>3 lecciones · Lógica y conceptos básicos</p><button class="btn" data-course="programacion">Abrir curso</button></article>
+    <article class="card"><div class="course-icon">🤖</div><h3>Introducción a la IA</h3><p>1 actividad · Uso responsable y prompts</p><button class="btn" data-course="ia">Abrir curso</button></article>
+  </div>
+  <div id="programacion-course" class="course-detail hidden">
+    <div class="section-head"><h2>Programación desde cero</h2><span id="program-progress-text" class="tag">0 de 3 lecciones</span></div>
+    <div class="progress"><span id="program-progress"></span></div>
+    <div class="lesson-layout section">
+      <div class="lesson-list" id="lesson-list"></div>
+      <div class="lesson-content" id="lesson-content"></div>
+    </div>
+  </div>
+  <div id="ia-course" class="course-detail hidden">
+    <div class="lesson-content section"><span class="tag">Curso de muestra</span><h2>Introducción a la inteligencia artificial</h2><p>La inteligencia artificial (IA) es un conjunto de tecnologías que pueden realizar tareas como identificar patrones, generar texto o ayudar a resolver problemas. Sus respuestas deben revisarse: puede equivocarse.</p><div class="activity"><h3>Actividad: escribe una instrucción</h3><p>Prueba este ejemplo de instrucción (prompt):</p><blockquote>“Explícame qué es una variable en programación con un ejemplo sencillo de la vida cotidiana. Usa palabras para principiantes”.</blockquote><button class="btn" id="show-prompt">Ver consejo</button><p id="prompt-tip" class="notice hidden">Una buena instrucción indica la tarea, el contexto y el tipo de respuesta que necesitas. No compartas datos personales ni aceptes toda respuesta sin revisarla.</p></div><button class="btn" id="complete-ia">Marcar actividad como completada</button><p id="ia-status" class="muted" aria-live="polite"></p></div>
+  </div>
+</section>
+
+<section id="proyecto" class="page hidden">
+  <div class="section-head"><div><div class="eyebrow" style="color:#287c63">Aprendizaje aplicado</div><h2>Mi primer proyecto</h2><p class="muted">Convierte una idea en una solución sencilla.</p></div></div>
+  <div class="card"><div class="course-icon">💡</div><span class="tag">Proyecto de ejemplo</span><h3>Asistente de estudio con IA</h3><p>Diseña una herramienta que ayude a otros estudiantes a comprender un tema difícil. En esta versión se presenta la idea y sus pasos; no hay una IA conectada.</p><ol class="project-steps"><li>Identifica un problema que tengan los estudiantes.</li><li>Escribe qué debería hacer tu asistente para ayudar.</li><li>Prepara una instrucción para una herramienta de IA.</li><li>Revisa la respuesta y presenta una demostración.</li></ol><button class="btn" id="project-check">Marcar proyecto como explorado</button><p id="project-status" class="muted" aria-live="polite"></p></div>
+  <div class="section card"><h3>Relación con el objetivo de Comas Tech</h3><p>La práctica y los proyectos permiten demostrar habilidades digitales que pueden apoyar el desarrollo académico y la preparación para oportunidades laborales.</p></div>
+</section>
+
+<section id="perfil" class="page hidden">
+  <div class="section-head"><div><div class="eyebrow" style="color:#287c63">Seguimiento de aprendizaje</div><h2>Mi avance</h2><p class="muted">Tu progreso de esta demostración se guarda en este navegador.</p></div></div>
+  <div class="card profile-box"><div class="course-icon">🎓</div><h3>Estudiante Comas Tech</h3><p>Continúa completando lecciones y actividades para ver tu avance.</p><div class="progress"><span id="profile-progress"></span></div><p id="profile-count">0 actividades completadas</p><div id="profile-list"></div><button class="btn secondary" id="reset-progress">Reiniciar progreso de demostración</button></div>
+  <p class="muted">Nota: no hay cuentas de usuario ni servidor. El avance se almacena localmente en este navegador.</p>
+</section>
+</main>
+<footer class="footer">Comas Tech · Prototipo académico inicial · Aprende, crea y crece.</footer>
+<script>
+const pages=[...document.querySelectorAll('.page')];
+function showPage(id){pages.forEach(p=>p.classList.toggle('hidden',p.id!==id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));window.scrollTo({top:0,behavior:'smooth'});if(id==='perfil')renderProfile();}
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.go)));
+document.querySelectorAll('[data-course]').forEach(b=>b.addEventListener('click',()=>{showPage('cursos');openCourse(b.dataset.course);}));
+const lessons=[
+{title:'¿Qué es programar?',desc:'Programar consiste en escribir instrucciones para que una computadora realice una tarea. Las instrucciones deben ser claras y estar en el orden correcto.',task:'Escribe tres pasos que una computadora podría seguir para mostrar un saludo.',hint:'Ejemplo: 1. Leer el nombre. 2. Crear el mensaje “Hola”. 3. Mostrar el mensaje.'},
+{title:'Variables y datos',desc:'Una variable es un nombre que usamos para guardar un dato, como un nombre o una edad. Los programas pueden consultar esos datos cuando los necesitan.',task:'Imagina una variable llamada nombre que almacena tu nombre. ¿Qué dato contendría?',hint:'Ejemplo en JavaScript: let nombre = "Ana";'},
+{title:'Tu primer programa',desc:'Un programa combina instrucciones para realizar una tarea. Podemos comenzar con algo simple: mostrar un saludo en la pantalla.',task:'Completa mentalmente la idea: el programa debe saludar a una persona usando su ______.',hint:'Una posible respuesta es “nombre”. Después puedes practicar cómo guardar ese dato en una variable.'}
+];
+let completed=JSON.parse(localStorage.getItem('comasTechCompleted')||'[]');
+let iaDone=localStorage.getItem('comasTechIA')==='true';
+let projectDone=localStorage.getItem('comasTechProject')==='true';
+let selectedLesson=0;
+function save(){localStorage.setItem('comasTechCompleted',JSON.stringify(completed));localStorage.setItem('comasTechIA',String(iaDone));localStorage.setItem('comasTechProject',String(projectDone));renderProgress();}
+function openCourse(which){document.querySelectorAll('.course-detail').forEach(e=>e.classList.add('hidden'));document.getElementById(which+'-course').classList.remove('hidden');if(which==='programacion'){renderLessonList();renderLesson();}document.getElementById(which+'-course').scrollIntoView({behavior:'smooth',block:'start'});}
+function renderLessonList(){const list=document.getElementById('lesson-list');list.innerHTML='';lessons.forEach((l,i)=>{const b=document.createElement('button');b.className='lesson-btn'+(i===selectedLesson?' selected':'');b.innerHTML=(completed.includes(i)?'✓ ':'')+(i+1)+'. '+l.title;b.addEventListener('click',()=>{selectedLesson=i;renderLessonList();renderLesson();});list.appendChild(b);});}
+function renderLesson(){const l=lessons[selectedLesson];const box=document.getElementById('lesson-content');box.innerHTML=`<span class="tag">Lección ${selectedLesson+1} de ${lessons.length}</span><h2>${l.title}</h2><p>${l.desc}</p><div class="activity"><h3>Actividad práctica</h3><p>${l.task}</p><button class="btn secondary" id="hint-btn">Mostrar pista</button><p id="hint-text" class="notice hidden">${l.hint}</p></div><button class="btn" id="complete-lesson">${completed.includes(selectedLesson)?'Lección completada ✓':'Marcar como completada'}</button><p id="lesson-status" class="muted" aria-live="polite"></p>`;document.getElementById('hint-btn').addEventListener('click',()=>document.getElementById('hint-text').classList.toggle('hidden'));document.getElementById('complete-lesson').addEventListener('click',()=>{if(!completed.includes(selectedLesson))completed.push(selectedLesson);save();renderLessonList();renderLesson();document.getElementById('lesson-status').textContent='¡Buen trabajo! Tu avance se ha actualizado.';});}
+document.getElementById('show-prompt').addEventListener('click',()=>document.getElementById('prompt-tip').classList.toggle('hidden'));
+document.getElementById('complete-ia').addEventListener('click',()=>{iaDone=!iaDone;save();document.getElementById('ia-status').textContent=iaDone?'Actividad marcada como completada.':'Puedes volver a marcar la actividad cuando termines.';document.getElementById('complete-ia').textContent=iaDone?'Actividad completada ✓':'Marcar actividad como completada';});
+document.getElementById('project-check').addEventListener('click',()=>{projectDone=!projectDone;save();document.getElementById('project-status').textContent=projectDone?'Proyecto marcado como explorado.':'Puedes marcarlo como explorado cuando quieras.';document.getElementById('project-check').textContent=projectDone?'Proyecto explorado ✓':'Marcar proyecto como explorado';});
+function renderProgress(){const total=completed.length+(iaDone?1:0)+(projectDone?1:0),max=lessons.length+2,pct=Math.round(total/max*100);['program-progress','profile-progress'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.width=pct+'%';});const txt=document.getElementById('program-progress-text');if(txt)txt.textContent=completed.length+' de '+lessons.length+' lecciones';const count=document.getElementById('profile-count');if(count)count.textContent=total+' de '+max+' actividades completadas ('+pct+'%)';}
+function renderProfile(){renderProgress();const list=document.getElementById('profile-list');list.innerHTML='<ul>'+lessons.map((l,i)=>'<li>'+l.title+': '+(completed.includes(i)?'Completada':'Pendiente')+'</li>').join('')+'<li>Actividad de IA: '+(iaDone?'Completada':'Pendiente')+'</li><li>Proyecto: '+(projectDone?'Explorado':'Pendiente')+'</li></ul>';document.getElementById('complete-ia').textContent=iaDone?'Actividad completada ✓':'Marcar actividad como completada';document.getElementById('project-check').textContent=projectDone?'Proyecto explorado ✓':'Marcar proyecto como explorado';}
+document.getElementById('reset-progress').addEventListener('click',()=>{if(confirm('¿Seguro que quieres reiniciar el progreso de demostración?')){completed=[];iaDone=false;projectDone=false;save();renderProfile();}});
+renderProgress();
+</script>
+</body>
+</html>
